@@ -1,4 +1,4 @@
-# JavaLearningLab
+# Java Learning Lab
 
 This repository contains various code samples I created when learning features of the Java language and environment. Java 8 (build 1.8.0_71) was the version this started on.
 
