@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+  version="2.1">
+
+    <persistence-unit name="com.fireduptech.servlet.jpa" transaction-type="RESOURCE_LOCAL">
+
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
+        
+
+       <!--<non-jta-data-source>java:comp/env/jdbc/JavaTomcatClassroomDB</non-jta-data-source>-->
+        <jta-data-source>java:comp/env/jdbc/JavaTomcatClassroomDB</jta-data-source>
+
+        
+        <class>com.fireduptech.servlets.hibernate.model.BikeEntity</class>
+        <class>com.fireduptech.servlets.hibernate.model.BikeTypeEntity</class>
+        
+
+
+
+
+        
+        <properties>
+
+            <!--<property name="javax.persistence.nonJtaDataSource" value="java:comp/env/jdbc/JavaTomcatClassroomDB"></property>-->
+
+            <property name="hibernate.connection.datasource" value="java:comp/env/jdbc/JavaTomcatClassroomDB"></property>
+
+            <property name="hibernate.id.new_generator_mappings" value="true"></property>
+
+            <!--<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/java_hibernate_classroom"/>
+            <property name="javax.persistence.jdbc.user" value="r******"/>
+            <property name="javax.persistence.jdbc.password" value="******"/>-->
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"></property>
+            <!-- <property name="show_sql" value="true"/> -->
+            <property name="hibernate.hbm2ddl.auto" value="update"></property>
+            <property name="hibernate.connection.pool_size" value="1"></property>
+ 
+            <property name="hibernate.show_sql" value="true"></property>
+            <property name="hibernate.archive.autodetection" value="class"></property>
+            <property name="hibernate.format_sql" value="true"></property>
+            <property name="connection.autocommit" value="false"></property>
+
+        
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"></property>
+            <!-- Explanation of property: 
+                 http://stackoverflow.com/questions/29670916/hibernate-with-jpa-connection-time-very-slow
+            -->
+
+        </properties>
+    </persistence-unit>
+</persistence>
+
+
