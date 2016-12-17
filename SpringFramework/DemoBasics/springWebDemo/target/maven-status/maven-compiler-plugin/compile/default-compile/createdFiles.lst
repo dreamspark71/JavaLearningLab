@@ -1,0 +1,6 @@
+com/fireduptech/springDemo/controller/BaseController.class
+com/fireduptech/springDemo/controller/testController.class
+com/fireduptech/springDemo/configuration/DispatcherServletConfiguration.class
+com/fireduptech/springDemo/configuration/ApplicationConfiguration.class
+com/fireduptech/springDemo/controller/Message.class
+com/fireduptech/springDemo/configuration/CustomWebApplicationInitializer.class
